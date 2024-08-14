@@ -1,6 +1,8 @@
 .form-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   position: absolute;
   top: 228px;
   left: 50%;
@@ -10,6 +12,7 @@
 .search-form {
   display: flex;
   gap: 32px;
+  margin: 0;
 }
 
 .search-form input,
@@ -20,7 +23,7 @@
   cursor: pointer;
   color: var(--third-text-color);
   border-radius: 20px;
-  min-width: 288px;
+  max-width: 288px;
   height: 40px;
   backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, 0.2);
@@ -36,6 +39,7 @@
 
 .search-form input:focus {
   background-image: none;
+
 }
 
 .search-form input:focus::placeholder {
@@ -47,7 +51,7 @@
   background-image: url(/src/images/polygon.svg);
   background-repeat: no-repeat;
   background-position: 90% 50%;
-  cursor: pointer;
+  position: relative;
 }
 
 @media screen and (max-width: 800px) {
@@ -57,12 +61,12 @@
 
   .search-form input,
   .dropdown-list {
-    min-width: 336px;
+    max-width: 336px;
   }
 }
 
 @media screen and (max-width: 600px) {
-.form-container {
+  .form-container {
     top: 200px;
 }
 
@@ -73,6 +77,6 @@
 
   .search-form input,
   .dropdown-list {
-    min-width: 280px;
+    max-width: 280px;
   }
 }
