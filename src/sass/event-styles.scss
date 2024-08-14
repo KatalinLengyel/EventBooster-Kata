@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   background-color: var(--background-color);
   padding: 0 16px;
-  gap: 95px 12px;
+  gap: 80px 12px;
 }
 
 .item-card {
@@ -14,6 +14,18 @@
   margin: -60px 0 0 0;
   min-height: 300px;
   max-width: 288px;
+//   transition: transform .5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.item-card:hover {
+  border: 1px solid rgba(220, 86, 197, 0.3);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: rgba(220, 86, 197, 0.3);
+  transition-duration: 0.5s;
+  transition-property: background;
 }
 
 .image-wrapper::after {
@@ -23,7 +35,7 @@
   border-bottom-right-radius: 50px;
   position: absolute;
   transform: translate(-202px, -19px);
-  z-index: 0;
+//   z-index: 0;
   width: 227px;
   height: 220px;
 }
@@ -42,7 +54,7 @@
   flex-direction: column;
   max-width: 267px;
   gap: 8px;
-  padding-top: 8px;
+  padding: 8px 0;
   text-align: center;
 }
 
@@ -65,20 +77,6 @@
 
 .item-location svg {
   display: flex;
-}
-
-body > div.item-gallery > div:nth-child(1) > a > div::after,
-body > div.item-gallery > div:nth-child(7) > a > div::after,
-body > div.item-gallery > div:nth-child(9) > a > div::after,
-body > div.item-gallery > div:nth-child(10) > a > div::after,
-body > div.item-gallery > div:nth-child(16) > a > div::after {
-  z-index: 1;
-}
-
-body > div.item-gallery > div:nth-child(8) > a > div::after,
-body > div.item-gallery > div:nth-child(13) > a > div::after {
-  height: 140px;
-  z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
